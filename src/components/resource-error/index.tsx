@@ -3,6 +3,7 @@ import type { FC } from 'react';
 import ErrorIcon from '../icons/error-icon';
 
 import history from '../../utils/history';
+import './error.scss';
 
 interface ResourceErrorProps {
   error?: string;
@@ -20,7 +21,7 @@ export const ResourceError: FC<ResourceErrorProps> = (props) => {
   };
 
   return (
-    <div>
+    <div className='container-error'>
       <ErrorIcon width={width} height={height} />
       <div>{error}</div>
       <button

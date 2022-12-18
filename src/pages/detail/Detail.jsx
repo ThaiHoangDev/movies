@@ -5,10 +5,7 @@ import tmdbApi from '../../api/movieApi';
 import apiConfig from '../../api/apiConfig';
 
 import './detail.scss';
-import CastList from './CastList';
 import VideoList from './VideoList';
-
-import MovieList from '../../components/movie-list/MovieList';
 
 const Detail = () => {
   const { category, id } = useParams();
@@ -56,12 +53,6 @@ const Detail = () => {
                   ))}
               </div>
               <p className='overview'>{item.overview}</p>
-              <div className='cast'>
-                <div className='section__header'>
-                  <h2>Casts</h2>
-                </div>
-                <CastList id={item.id} />
-              </div>
             </div>
           </div>
           <div className='container'>
